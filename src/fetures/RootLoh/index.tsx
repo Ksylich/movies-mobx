@@ -1,6 +1,6 @@
 import { inject, observer } from "mobx-react";
 import React, { Component } from "react";
-import { COUNTER_STORE, ICounterStore } from "../../stores/counter";
+import { COUNTER_STORE, ICounterStore } from "../../mobx/stores/counter";
 
 interface IProps {
     [COUNTER_STORE]?: ICounterStore;

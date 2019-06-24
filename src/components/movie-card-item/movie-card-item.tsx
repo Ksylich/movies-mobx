@@ -1,0 +1,37 @@
+import React, { useCallback } from "react";
+import { Link } from "react-router-dom";
+
+import "./movie-card-item.css";
+
+import NoPoster from "../../assets/icons/NoPoster.jpg";
+
+interface IProps {
+    movie: { id: number, title: string, posterPath: string };
+    idx: number;
+    onHandleChooseMovie: (event: any) => void;
+}
+
+const MovieCardItem = ({  movie, idx, onHandleChooseMovie }: IProps) => {
+  const { title, posterPath } = movie;
+
+  const style = `crd crd-${idx}`;
+
+  const poster = posterPath || NoPoster;
+
+  const chooseMovie = useCallback(
+    () => {
+      onHandleChooseMovie(movie.id);
+    },
+    [movie.id],
+  );
+
+  return (
+    <div className={style} data-title={title} role="presentation" onClick={chooseMovie}>
+      <Link className="lnk" to="/movie-details-page">
+        <img src={poster} alt="" className="card-img-top" />
+      </Link>
+    </div>
+  );
+};
+
+export default MovieCardItem;

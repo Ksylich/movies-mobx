@@ -1,9 +1,8 @@
 import { Provider } from "mobx-react";
 import React from "react";
 
-import "./App.css";
 import { RootLoh } from "./fetures/RootLoh";
-import { store } from "./stores/store";
+import { store } from "./mobx/stores/store";
 
 const App: React.FC = () => {
   return (
