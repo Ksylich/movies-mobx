@@ -1,5 +1,7 @@
-import { COUNTER_STORE, counterStore } from "./counter";
+import { MOVIES_STORE, moviesStore } from './movies';
 
-export const store = {
-    [COUNTER_STORE]: counterStore,
+const store = {
+  [MOVIES_STORE]: moviesStore,
 };
+
+export default store;

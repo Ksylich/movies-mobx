@@ -1,0 +1,68 @@
+.body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1em;
+    grid-auto-rows: minmax(auto, auto);
+    padding: 0 3rem;
+  }
+  
+  @media screen and (max-width: 2200px) {
+    .body {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 1335px) {
+    .body {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media screen and (min-width:568px) and (max-width: 1024px) {
+    .body {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .main{
+      min-height: 100hv;
+      background-attachment: fixed;
+    }
+  }
+  
+  
+  
+  /* iPhone 5 in landscape */
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+    .body {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .crd-18{
+      grid-column-start: 1;
+    }
+    .crd-19{
+      grid-column-start: 2;
+    }
+    .crd:hover::after{
+      font-size: 30px; /* Размер текста подсказки */
+      font-weight: 400;
+    }
+    .main{
+      width: 101%;
+    }
+  
+    
+  }
+  
+  @media screen and (max-width: 700px) {
+    .body {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .crd-18{
+      grid-column-start: 1;
+    }
+    .crd-19{
+      grid-column-start: 2;
+    }
+  }
+  
+  
+  

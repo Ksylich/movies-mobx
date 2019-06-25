@@ -1,0 +1,40 @@
+.pagination-panel {
+    width: 100%;
+    padding: 5%;
+    align-content: center;
+  }
+  
+  .page-link {
+    background: rgba(59, 57, 61, 0); /* Полупрозрачный цвет фона */
+    color: #878f89;
+    border-color: #c8d5cb;
+    width: 70px;
+    height: 60px;
+    padding-top: 1.3rem;
+    text-align: center;
+  }
+  .page-link:hover {
+    color: #84cd92;
+    border-color: #878f89;
+    font-weight: 1000;
+  }
+  
+  .page-link .active {
+    color: #84cd92;
+    font-weight: 1000;
+  }
+  
+  .invisible{
+    display: none;
+  }
+  
+  @media screen and (max-width: 700px){
+    .page-link {
+     
+      width: 55px;
+      height: 40px;
+      padding-top: 0.6rem;
+  
+    }
+  }
+  

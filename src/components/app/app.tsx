@@ -2,10 +2,9 @@ import React, { Fragment } from "react";
 import { Route, Switch } from "react-router-dom";
 import { LastLocationProvider } from "react-router-last-location";
 
-import Header from '../header';
-import { FavoritesPage, MainPage, MovieDetailsPage } from '../pages';
+import Header from "../header";
+import { FavoritesPage, MainPage, MovieDetailsPage } from "../pages";
 
-import "./app.css";
 
 const App = () => (
   <LastLocationProvider>

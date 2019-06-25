@@ -1,0 +1,69 @@
+.main {
+    background-color: #e6f3f3;
+    background-attachment: fixed;
+    min-height: 92.6vh;
+  }
+  
+  .label {
+    padding: 3rem 3.5rem 1rem;
+    font-size: 25px;
+    font-weight: 600;
+    color: #878f89;
+  }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+    .label {
+      font-size: 52px;
+    }
+    .main {
+      min-height: 97vh;
+    }
+    .section {
+      min-height: 97vh; 
+    }
+  }
+  
+  @media only screen and (min-device-width: 411px) and (max-device-width: 823px) {
+    .main {
+      min-height: 97.4vh;
+    }
+    .section {
+      min-height: 97.4vh;
+    }
+  }
+  
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
+    .main {
+      min-height: 96.5vh;
+    }
+    .section {
+      min-height: 94.5vh;
+    }
+  }
+  
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+    .main {
+      min-height: 97.7vh;
+    }
+    .section {
+      min-height: 97.7vh;; 
+    }
+  }
+  
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .main {
+      min-height: 94.6vh;
+    }
+    .section {
+      min-height: 94.6vh;
+    }
+  }
+  
+  @media only screen and (min-device-width: 411px) and (max-device-width: 823px){
+      .main{
+          min-height: 97.4vh;
+      }
+      .section {
+          height: 97.4vh; 
+        }
+      }
+  
