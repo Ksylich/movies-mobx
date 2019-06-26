@@ -19,7 +19,7 @@ const PaginationItem = ({
     () => {
       onHandleChangePage(currentPage);
     },
-    [currentPage],
+    [currentPage, onHandleChangePage],
   );
 
   return (

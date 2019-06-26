@@ -19,7 +19,7 @@ const MovieCards = ({ movies, onHandleChooseMovie }: IProps) => {
         onHandleChooseMovie={onHandleChooseMovie}
       />
     ),
-    [movies],
+    [movies,  onHandleChooseMovie],
   );
 
   return (
