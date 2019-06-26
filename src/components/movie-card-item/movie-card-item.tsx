@@ -6,12 +6,12 @@ import "./movie-card-item.css";
 import NoPoster from "../../assets/icons/NoPoster.jpg";
 
 interface IProps {
-    movie: { id: number, title: string, posterPath: string };
-    idx: number;
-    onHandleChooseMovie: (event: any) => void;
+  movie: { id: number, title: string, posterPath: string };
+  idx: number;
+  onHandleChooseMovie: (event: any) => void;
 }
 
-const MovieCardItem = ({  movie, idx, onHandleChooseMovie }: IProps) => {
+const MovieCardItem = ({ movie, idx, onHandleChooseMovie }: IProps) => {
   const { title, posterPath } = movie;
 
   const style = `crd crd-${idx}`;

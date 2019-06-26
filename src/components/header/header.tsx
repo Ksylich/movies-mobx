@@ -32,8 +32,8 @@ const Header = () => (
           <li>
             <div className="dropdown">
               <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-My Account
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                My Account
               </button>
               <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
                 <Link to="/favorites-page">

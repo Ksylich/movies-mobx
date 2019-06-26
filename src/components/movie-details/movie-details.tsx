@@ -11,7 +11,7 @@ import Movie from "../../movie-object";
 import { DecktopMovieInformation, DecktopNav } from "../movie-details-desktop";
 import { MobMovieInformation, MobNav } from "../movie-details-mb";
 
-interface IProps  extends RouteComponentProps {
+interface IProps extends RouteComponentProps {
   [MOVIES_STORE]?: IMovieStore;
   movie: Movie;
   isFavorite: boolean;

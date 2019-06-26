@@ -19,7 +19,7 @@ const FavoriteItem = ({ movie, onHandleRemoveMovie, onHandleChooseMovie }: IProp
     () => {
       onHandleChooseMovie(movie.id);
     },
-    [movie.id,  onHandleChooseMovie],
+    [movie.id, onHandleChooseMovie],
   );
 
   const removeMovie = useCallback(
@@ -41,7 +41,7 @@ const FavoriteItem = ({ movie, onHandleRemoveMovie, onHandleChooseMovie }: IProp
           <div className="fav-info-top">
             <div className="fav-title">{movie.title}</div>
             <button onClick={removeMovie} type="button" className="btn btn-default">
-                Unfavorite
+              Unfavorite
             </button>
           </div>
           <div className="overview-fav">{`${movie.overview}`}</div>

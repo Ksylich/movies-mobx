@@ -11,10 +11,10 @@ interface IProps extends WithLastLocationProps {
 }
 
 interface IMethods {
-    returnArr(): void;
-    findCurrentMovie(movies: Movie[]): void;
-    checkIsFavorite(movie: Movie): void;
-    render(): void;
+  returnArr(): void;
+  findCurrentMovie(movies: Movie[]): void;
+  checkIsFavorite(movie: Movie): void;
+  render(): void;
 }
 
 @inject(MOVIES_STORE)
@@ -33,7 +33,7 @@ class MovieDetailsContainer extends Component<IProps, IMethods> {
 
   public returnArr() {
     const {
-        [MOVIES_STORE]: moviesStore,
+      [MOVIES_STORE]: moviesStore,
       lastLocation,
     } = this.props;
     return lastLocation!.pathname === "/" ? moviesStore!.movies : moviesStore!.favorites;
@@ -41,14 +41,14 @@ class MovieDetailsContainer extends Component<IProps, IMethods> {
 
   public findCurrentMovie(movies: Movie[]) {
     const {
-        [MOVIES_STORE]: moviesStore,
+      [MOVIES_STORE]: moviesStore,
     } = this.props;
     return movies.find((m) => m.id === moviesStore!.currentMovieId);
   }
 
   public checkIsFavorite(movie: Movie) {
     const {
-        [MOVIES_STORE]: moviesStore,
+      [MOVIES_STORE]: moviesStore,
     } = this.props;
     return !moviesStore!.favorites.find((mov) => mov.id === movie.id);
   }
@@ -57,9 +57,9 @@ class MovieDetailsContainer extends Component<IProps, IMethods> {
     const mvs = this.returnArr();
     const movie = this.findCurrentMovie(mvs);
     if (movie === undefined) {
-        return (
-            <h1>Error! Something wrong!!!</h1>
-        );
+      return (
+        <h1>Error! Something wrong!!!</h1>
+      );
     }
     const isFavorite = this.checkIsFavorite(movie);
     return (

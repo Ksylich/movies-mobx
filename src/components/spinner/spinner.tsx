@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import './spinner.css';
+import "./spinner.css";
 
 const Spinner = () => (
   <div className="lds-css ng-scope">

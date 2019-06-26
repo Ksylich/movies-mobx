@@ -7,9 +7,9 @@ import Movie from "../../movie-object";
 import "./movie-details-mb.css";
 
 interface IProps {
-    movie: Movie;
-    addToFavorites: (event: any) => void;
-    btnStyle: string;
+  movie: Movie;
+  addToFavorites: (event: any) => void;
+  btnStyle: string;
 }
 
 const MobMovieInformation = ({ movie, addToFavorites, btnStyle }: IProps) => {

@@ -58,7 +58,7 @@ class PaginationPanel extends Component<IProps> {
     return (
       <Fragment>
         {prefPages.length > pageCount ? (
-          <PaginationItem title="..." onHandleChangePage={() => {}} />
+          <PaginationItem title="..." onHandleChangePage={() => { }} />
         ) : null}
         {this.renderPageNumbers(pref)}
         <PaginationItem
@@ -70,7 +70,7 @@ class PaginationPanel extends Component<IProps> {
         />
         {this.renderPageNumbers(after)}
         {afterPages.length > pageCount ? (
-          <PaginationItem title="..." onHandleChangePage={() => {}}/>
+          <PaginationItem title="..." onHandleChangePage={() => { }} />
         ) : null}
       </Fragment>
     );

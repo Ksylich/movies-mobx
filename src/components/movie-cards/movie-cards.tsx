@@ -4,9 +4,9 @@ import Movie from "../../movie-object";
 import MovieCardItem from "../movie-card-item";
 import "./movie-cards.css";
 
-interface IProps  {
-    movies: Movie[];
-    onHandleChooseMovie: (event: any) => void;
+interface IProps {
+  movies: Movie[];
+  onHandleChooseMovie: (event: any) => void;
 }
 
 const MovieCards = ({ movies, onHandleChooseMovie }: IProps) => {
@@ -19,7 +19,7 @@ const MovieCards = ({ movies, onHandleChooseMovie }: IProps) => {
         onHandleChooseMovie={onHandleChooseMovie}
       />
     ),
-    [movies,  onHandleChooseMovie],
+    [movies, onHandleChooseMovie],
   );
 
   return (

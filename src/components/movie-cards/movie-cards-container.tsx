@@ -22,16 +22,16 @@ class MovieCardsContainer extends Component<IProps> {
   public render() {
     const { [MOVIES_STORE]: moviesStore } = this.props;
 
-    if ( moviesStore!.loading) {
+    if (moviesStore!.loading) {
       return (
         <Spinner />
       );
     }
 
-    if ( moviesStore!.error) {
-      return  <ErrorIndicator />;
+    if (moviesStore!.error) {
+      return <ErrorIndicator />;
     }
-    return <MovieCards movies={ moviesStore!.movies} onHandleChooseMovie={ moviesStore!.changeMovie} />;
+    return <MovieCards movies={moviesStore!.movies} onHandleChooseMovie={moviesStore!.changeMovie} />;
   }
 }
 

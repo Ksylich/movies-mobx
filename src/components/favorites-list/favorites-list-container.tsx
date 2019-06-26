@@ -17,14 +17,14 @@ interface IMethod {
 class FavoritesListContainer extends Component<IProps, IMethod> {
   public onHandleRemoveMovie = (id: number) => {
     const {
-        [MOVIES_STORE]: moviesStore,
+      [MOVIES_STORE]: moviesStore,
     } = this.props;
     moviesStore!.removeMovie(id);
   }
 
   public render() {
     const {
-        [MOVIES_STORE]: moviesStore,
+      [MOVIES_STORE]: moviesStore,
     } = this.props;
     return (
       <FavoritesList

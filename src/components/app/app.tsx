@@ -5,7 +5,6 @@ import { LastLocationProvider } from "react-router-last-location";
 import Header from "../header";
 import { FavoritesPage, MainPage, MovieDetailsPage } from "../pages";
 
-
 const App = () => (
   <LastLocationProvider>
     <Fragment>
