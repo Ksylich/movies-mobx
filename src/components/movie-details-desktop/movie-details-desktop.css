@@ -1,0 +1,178 @@
+.nav-bar {
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  width: 100%;
+  padding-top: 5rem;
+  color: #e2ece4;
+}
+
+.left {
+  display: grid;
+  grid-template-columns: 5% 95%;
+}
+
+.right {
+  display: grid;
+  grid-template-columns: 95% 5%;
+}
+
+.right .text {
+  padding-right: 1rem;
+  float: right;
+}
+
+.left .text {
+  padding-left: 1rem;
+}
+
+.desk {
+  height: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 60%;
+  position: relative;
+  padding-top: 6rem;
+  grid-gap: 3em;
+  /* min-width: 650px; */
+}
+
+.image img{
+  width: 100%;
+}
+
+.info button {
+  margin: 0 1rem 0 auto;
+  border-width: 1px;
+  border-radius: 7%;
+  border-color: #868c88;
+  color: #868c88;
+}
+
+.info button:hover{
+    color:red;
+}
+
+.movie-title{
+  font-size: 40px;
+  color: white;
+  font-family: Arial, sans-serif; /* Гарнитура шрифта */
+  display: block;
+}
+
+.about{
+  margin-top: 0.5rem;
+  display: grid;
+  grid-template-columns: 15% 22% 60%;
+  font-size: 20px;
+  font-family: Arial, sans-serif; /* Гарнитура шрифта */
+}
+
+.language{
+  text-align: center;
+  border-right: 1px solid #868c88;
+  border-left: 1px solid #868c88;
+}
+
+.realise-date{
+  margin-left: 0.6em;
+}
+
+.overview{
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid #868c88;
+  border-bottom: 1px solid #868c88;
+  margin-top: 1.5rem;
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+@media  screen and  (min-device-width : 768px) and (max-width: 1202px) {
+  .movie-title{
+    font-size: 30px;
+  }
+  .desk {
+    grid-gap: 2em;
+  }
+
+  .about{
+    grid-template-columns: 23% 30% 47%;
+    text-align: center;
+  }
+  .score{
+    padding-right: 0.3rem;
+  }
+  .realise-date{
+    padding-left: 0.1rem;
+  }
+  .language{
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+  }
+  .overview{
+    font-size: 15px;
+  }
+  .image img{
+    height: 350px;
+  }
+}
+
+/* @media   screen and  (min-device-width : 768px) and (max-width: 1024px){
+
+
+  .movie-title{
+    font-size: 40px;
+  }
+
+  .overview{
+    font-size: 25px;
+  }
+
+  .about{
+    font-size: 25px;  
+  }
+
+} */
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+  .container .desk , .container .nav-bar{
+    display: none;
+  }
+}
+
+@media  screen and (max-width: 770px){
+  .about{    
+    font-size: 15px;
+  }
+
+  
+  .navbar{
+      
+     width: 103%; 
+  
+}
+}
+
+
+  @media   screen  and (max-height: 700px){
+    .nav-bar {
+      padding-top: 5%;
+    }
+    .desk {
+      padding-top: 3%;
+      grid-gap: 1rem;
+      grid-template-columns: 30% 70%;
+    }
+    .image img{
+      width: 80%;
+    }
+  }

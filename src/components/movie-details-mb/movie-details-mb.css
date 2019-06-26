@@ -1,0 +1,121 @@
+.nav-bar-m{
+    display: grid;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    margin-right: 4.3rem;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    font-size: 50px;
+  }
+  
+  .left-m {
+    display: grid;
+    grid-template-columns: 5% 95%;
+    width: auto;
+  }
+  
+  .right-m {
+    display: grid;
+    grid-template-columns: 95% 5%;
+    width: auto;
+  }
+  
+  .right-m .text {
+    padding-right: 1rem;
+    float: right;
+  }
+  
+  .left-m .text {
+    padding-left: 2.5rem;
+  }
+  
+  .nav-bar-m img{
+    padding-bottom: 0.29rem;
+    
+  }
+  
+  
+  
+  
+  .deck-top{
+    display: grid;
+    grid-template-columns:55% 45%;
+    margin-top: 15%;
+    margin-left: 3rem;
+    margin-right: 4.3rem;
+    grid-gap: 3em;
+  }
+  
+  .deck-top .image img{
+    border-radius: 30px;
+  }
+  
+  .info-top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .score-mob{
+    display: grid;
+    grid-template-rows: 40% 60%;
+    padding-bottom: 4rem;
+  }
+  
+  .txt{
+   color: #e2ece4;
+   font-size: 45px;
+  }
+  .txt-data{
+   color: white;
+   font-size: 60px;
+  }
+  
+  .desk-bottom{
+    margin-top:3rem;
+    margin-left: 3rem;
+    margin-right: 4.3rem;
+  }
+  
+  .mob-overview{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid #868c88;
+    border-bottom: 1px solid #868c88;
+    margin-top: 1rem;
+    font-size: 33px;
+  }
+  
+  .mob-movie-title{
+    font-size: 65px;
+    color: white;
+    font-family: Arial, sans-serif; /* Гарнитура шрифта */
+    display: block;
+  }
+  
+  
+  .nav-bar-m {
+    display: none;
+  }
+  
+  .desk-m{
+    display: none;
+  }
+  
+  
+  
+  @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+    .nav-bar-m {
+      display: grid;
+    }
+    
+    .navbar{
+      
+      width: 101%;
+      /* min-width: 600px; */
+  }
+  
+  
+    .desk-m{
+      display: grid;
+    }
+  }

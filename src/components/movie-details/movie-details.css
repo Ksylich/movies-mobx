@@ -1,0 +1,117 @@
+.content {
+    z-index: 3;
+    font-size: 25px;
+    position: absolute;
+    color: white;
+    width: 100%;
+    width: 100%;
+  }
+  
+  .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .section {
+    width: 100%;
+    height: 92.6vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 10%;
+    -webkit-filter: blur(20px);
+    filter: blur(15px)  drop-shadow(0px 0px 0px black)  brightness(0.5) ;
+  
+    color: white;
+    z-index: 1;
+    position: absolute;
+  }
+  
+  .cls {
+    width: 100%;
+    height: 92.6vh;
+    background-color: #000;
+    opacity: 0.3;
+    position: absolute;
+    z-index: 2;
+  }
+  
+  .hidden{
+    visibility: hidden;
+  }
+  
+  /* iPhone 5 in portrait & landscape */
+  
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+    .section {
+      min-height: 97vh; 
+    }
+  }
+  
+  @media only screen and (min-device-width: 411px) and (max-device-width: 823px) {
+  
+    .section {
+      min-height: 97.4vh;
+    }
+  }
+  
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
+  
+    .section {
+      min-height: 94.5vh;
+    }
+  }
+  
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+   
+    .section {
+      min-height: 97.7vh;; 
+    }
+  }
+  
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  
+    .section {
+      min-height: 94.6vh;
+    }
+  }
+  
+  @media only screen and (min-device-width: 411px) and (max-device-width: 823px){
+      
+      .section {
+          height: 97.4vh; 
+        }
+      }
+  
+  
+  /* @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+    .section {
+      height: 96.5vh; 
+    }
+    
+    .cls {
+      height: 96.5vh;
+    }
+  }
+  
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1366px) {
+    .section {
+      height: 94vh; 
+    }
+    
+    .cls {
+      height: 94vh;
+    }
+  } */
+  
+  @media   screen  and (max-height: 700px){
+    .section {
+      height: 89vh; 
+    }
+  }
+  
+  @media   screen  and (max-height: 600px){
+    .section {
+      height: 610px; 
+    }
+  }
