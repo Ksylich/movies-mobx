@@ -12,22 +12,21 @@ interface IProps {
   onHandleChooseMovie: (event: any) => void;
 }
 
-const FavoriteItem = ({ movie, onHandleRemoveMovie, onHandleChooseMovie }: IProps) => {
+// TODO: Лучше писать как FavoriteItem: React.FC<IProps>. Перепиши это во всех функциональных компонентах
+const FavoriteItem = ({
+  movie,
+  onHandleRemoveMovie,
+  onHandleChooseMovie,
+}: IProps) => {
   const poster = movie.posterPath || NoPoster;
 
-  const chooseMovie = useCallback(
-    () => {
-      onHandleChooseMovie(movie.id);
-    },
-    [movie.id, onHandleChooseMovie],
-  );
+  const chooseMovie = useCallback(() => {
+    onHandleChooseMovie(movie.id);
+  }, [movie.id, onHandleChooseMovie]);
 
-  const removeMovie = useCallback(
-    () => {
-      onHandleRemoveMovie(movie.id);
-    },
-    [movie.id, onHandleRemoveMovie],
-  );
+  const removeMovie = useCallback(() => {
+    onHandleRemoveMovie(movie.id);
+  }, [movie.id, onHandleRemoveMovie]);
 
   return (
     <div className="item-list">
@@ -40,7 +39,11 @@ const FavoriteItem = ({ movie, onHandleRemoveMovie, onHandleChooseMovie }: IProp
         <div className="info">
           <div className="fav-info-top">
             <div className="fav-title">{movie.title}</div>
-            <button onClick={removeMovie} type="button" className="btn btn-default">
+            <button
+              onClick={removeMovie}
+              type="button"
+              className="btn btn-default"
+            >
               Unfavorite
             </button>
           </div>

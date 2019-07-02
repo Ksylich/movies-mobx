@@ -1,8 +1,9 @@
 import axios from 'axios';
 
+// TODO: Опять require?)
 require('dotenv').config();
 
-
+// TODO: И почему файл js ?
 export default class MovieService {
   getOneMoviePage = async (page) => {
     try {

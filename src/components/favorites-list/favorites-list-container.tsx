@@ -14,18 +14,15 @@ interface IMethod {
 
 @inject(MOVIES_STORE)
 @observer
+// TODO: Неверно используешь описание компонента. У него идет описание пропосов, а потом стейта. То что у тебя в IMethod нужно описывать как class Container implements IMethod
 class FavoritesListContainer extends Component<IProps, IMethod> {
   public onHandleRemoveMovie = (id: number) => {
-    const {
-      [MOVIES_STORE]: moviesStore,
-    } = this.props;
+    const { [MOVIES_STORE]: moviesStore } = this.props;
     moviesStore!.removeMovie(id);
   }
 
   public render() {
-    const {
-      [MOVIES_STORE]: moviesStore,
-    } = this.props;
+    const { [MOVIES_STORE]: moviesStore } = this.props;
     return (
       <FavoritesList
         favorites={moviesStore!.favorites}

@@ -14,7 +14,6 @@ interface IProps {
 @inject(MOVIES_STORE)
 @observer
 class PaginationPanel extends Component<IProps> {
-
   public renderPagBegin = () => {
     const { [MOVIES_STORE]: moviesStore } = this.props;
     const style = classNames({
@@ -44,21 +43,27 @@ class PaginationPanel extends Component<IProps> {
     const { [MOVIES_STORE]: moviesStore } = this.props;
     const pageIndex = moviesStore!.currentPage - 1;
 
-    const PAGES_ARR = Array.from({ length: moviesStore!.pagesCount }, (v, k) => k + 1);
+    const PAGES_ARR = Array.from(
+      { length: moviesStore!.pagesCount },
+      (v, k) => k + 1,
+    );
 
     const prefPages = PAGES_ARR.slice(0, pageIndex);
     const afterPages = PAGES_ARR.slice(pageIndex + 1);
     const pageCount = 1;
 
-    const pref = prefPages.length > pageCount ? prefPages.slice(-pageCount) : prefPages;
-    const after = afterPages.length > pageCount
-      ? afterPages.slice(0, pageCount)
-      : afterPages;
+    const pref =
+      prefPages.length > pageCount ? prefPages.slice(-pageCount) : prefPages;
+    const after =
+      afterPages.length > pageCount
+        ? afterPages.slice(0, pageCount)
+        : afterPages;
 
     return (
       <Fragment>
         {prefPages.length > pageCount ? (
-          <PaginationItem title="..." onHandleChangePage={() => { }} />
+          // TODO: Используй _.noop вместо пустых функций
+          <PaginationItem title="..." onHandleChangePage={() => {}} />
         ) : null}
         {this.renderPageNumbers(pref)}
         <PaginationItem
@@ -70,7 +75,7 @@ class PaginationPanel extends Component<IProps> {
         />
         {this.renderPageNumbers(after)}
         {afterPages.length > pageCount ? (
-          <PaginationItem title="..." onHandleChangePage={() => { }} />
+          <PaginationItem title="..." onHandleChangePage={() => {}} />
         ) : null}
       </Fragment>
     );
