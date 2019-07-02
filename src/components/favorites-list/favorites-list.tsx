@@ -11,11 +11,11 @@ interface IProps {
   onHandleChooseMovie: (event: any) => void;
 }
 
-const FavoritesList = ({
+const FavoritesList: React.FC<IProps> = ({
   favorites,
   onHandleRemoveMovie,
   onHandleChooseMovie,
-}: IProps) => {
+}) => {
   const renderMovie = useCallback(
     (movie) => (
       <FavoritesItem

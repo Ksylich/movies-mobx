@@ -8,13 +8,13 @@ interface IProps {
   currentPage?: number;
 }
 
-const PaginationItem = ({
+const PaginationItem: React.FC<IProps> = ({
   title,
   pageItemStyle,
   btnStyle,
   onHandleChangePage,
   currentPage,
-}: IProps) => {
+}) => {
   const changePage = useCallback(
     () => {
       onHandleChangePage(currentPage);

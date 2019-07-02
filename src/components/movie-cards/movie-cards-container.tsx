@@ -1,9 +1,9 @@
 import { inject, observer } from "mobx-react";
 import React, { Component } from "react";
 
-import { IMovieStore, MOVIES_STORE } from "../../mobx/stores/movies";
 import ErrorIndicator from "../error-indicator";
 import Spinner from "../spinner";
+import { IMovieStore, MOVIES_STORE } from "../stores/movies";
 import MovieCards from "./movie-cards";
 
 interface IProps {

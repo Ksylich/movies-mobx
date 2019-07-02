@@ -10,7 +10,7 @@ interface IProps {
   onHandleNext: (event: any) => void;
 }
 
-const MobNav = ({ onHandleBack, onHandleNext }: IProps) => (
+const MobNav: React.FC<IProps> = ({ onHandleBack, onHandleNext }) => (
   <div className="nav-bar-m">
     <div className="left-m">
       <div>

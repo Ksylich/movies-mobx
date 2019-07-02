@@ -1,11 +1,11 @@
-import axios from 'axios';
+import axios from "axios";
 
-// TODO: Опять require?)
-require('dotenv').config();
+import dotenv from "dotenv";
 
-// TODO: И почему файл js ?
+dotenv.config();
+
 export default class MovieService {
-  getOneMoviePage = async (page) => {
+   public getOneMoviePage = async (page: number) => {
     try {
       const res = await axios.get(`${process.env.REACT_APP_API_BASE}/now_playing?${process.env.REACT_APP_API_KEY}&language=en-US&page=${page}`);
       return {
@@ -17,7 +17,7 @@ export default class MovieService {
     }
   }
 
-  transformMovie = (movie) => ({
+   public transformMovie = (movie: any) => ({
     id: movie.id,
     title: movie.original_title,
     overview: movie.overview,
@@ -25,6 +25,5 @@ export default class MovieService {
     language: movie.original_language,
     realiseDate: movie.release_date,
     posterPath: movie.poster_path ? process.env.REACT_APP_POSTER_BASE + movie.poster_path : null,
-  });
+  })
 }
-

@@ -1,9 +1,10 @@
 import classNames from "classnames";
+import noop from "lodash/noop";
 import { inject, observer } from "mobx-react";
 import React, { Component, Fragment } from "react";
 
-import { IMovieStore, MOVIES_STORE } from "../../mobx/stores/movies";
 import PaginationItem from "../pagination-item";
+import { IMovieStore, MOVIES_STORE } from "../stores/movies";
 
 import "./pagination-panel.css";
 
@@ -62,8 +63,7 @@ class PaginationPanel extends Component<IProps> {
     return (
       <Fragment>
         {prefPages.length > pageCount ? (
-          // TODO: Используй _.noop вместо пустых функций
-          <PaginationItem title="..." onHandleChangePage={() => {}} />
+          <PaginationItem title="..." onHandleChangePage={noop} />
         ) : null}
         {this.renderPageNumbers(pref)}
         <PaginationItem
@@ -75,7 +75,7 @@ class PaginationPanel extends Component<IProps> {
         />
         {this.renderPageNumbers(after)}
         {afterPages.length > pageCount ? (
-          <PaginationItem title="..." onHandleChangePage={() => {}} />
+          <PaginationItem title="..." onHandleChangePage={noop} />
         ) : null}
       </Fragment>
     );

@@ -9,7 +9,7 @@ interface IProps {
   onHandleChooseMovie: (event: any) => void;
 }
 
-const MovieCards = ({ movies, onHandleChooseMovie }: IProps) => {
+const MovieCards: React.FC<IProps> = ({ movies, onHandleChooseMovie }) => {
   const renderMovie = useCallback(
     (movie) => (
       <MovieCardItem

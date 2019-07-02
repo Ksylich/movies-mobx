@@ -10,7 +10,7 @@ interface IProps {
   onHandleNext: (event: any) => void;
 }
 
-const DecktopNav = ({ onHandleBack, onHandleNext }: IProps) => (
+const DecktopNav: React.FC<IProps> = ({ onHandleBack, onHandleNext }) => (
   <div className="container">
     <div className="nav-bar">
       <div className="left" onClick={onHandleBack} role="presentation">

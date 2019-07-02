@@ -6,8 +6,8 @@ import {
 } from "react-router-last-location";
 import Movie from "../../movie-object";
 
-import { IMovieStore, MOVIES_STORE } from "../../mobx/stores/movies";
 import MovieDetails from "../movie-details";
+import { IMovieStore, MOVIES_STORE } from "../stores/movies";
 
 interface IProps extends WithLastLocationProps {
   [MOVIES_STORE]?: IMovieStore;
@@ -17,13 +17,11 @@ interface IMethods {
   returnArr(): void;
   findCurrentMovie(movies: Movie[]): void;
   checkIsFavorite(movie: Movie): void;
-  // TODO: По факту в данном случае тебе render описывать не нужно. У тебя твой интерфейс должен экстендить оригинальный ректовский.
-  render(): void;
 }
 
 @inject(MOVIES_STORE)
 @observer
-class MovieDetailsContainer extends Component<IProps, IMethods> {
+class MovieDetailsContainer extends Component<IProps> implements IMethods {
   public onNextClick = () => {
     const { [MOVIES_STORE]: moviesStore } = this.props;
     const movies = this.returnArr();
@@ -37,7 +35,6 @@ class MovieDetailsContainer extends Component<IProps, IMethods> {
   }
 
   public returnArr() {
-    // TODO: Не описана пропса lastLocation
     const { [MOVIES_STORE]: moviesStore, lastLocation } = this.props;
     return lastLocation!.pathname === "/"
       ? moviesStore!.movies

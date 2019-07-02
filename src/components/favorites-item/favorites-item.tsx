@@ -12,12 +12,11 @@ interface IProps {
   onHandleChooseMovie: (event: any) => void;
 }
 
-// TODO: Лучше писать как FavoriteItem: React.FC<IProps>. Перепиши это во всех функциональных компонентах
-const FavoriteItem = ({
+const FavoriteItem: React.FC<IProps> = ({
   movie,
   onHandleRemoveMovie,
   onHandleChooseMovie,
-}: IProps) => {
+}) => {
   const poster = movie.posterPath || NoPoster;
 
   const chooseMovie = useCallback(() => {

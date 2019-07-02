@@ -2,8 +2,8 @@ import React from "react";
 
 import "./movie-details-desktop.css";
 
-import NoPoster from "../../assets/icons/NoPoster.jpg";
 import Movie from "../../movie-object";
+import Poster from "../poster";
 
 interface IProps {
   movie: Movie;
@@ -11,18 +11,17 @@ interface IProps {
   btnStyle: string;
 }
 
-const DecktopMovieInformation = ({
+const DecktopMovieInformation: React.FC<IProps> = ({
   movie,
   addToFavorites,
   btnStyle,
-}: IProps) => {
-  const poster = movie.posterPath || NoPoster;
+}) => {
 
   return (
     <div className="container">
       <div className="desk">
         <div className="image">
-          <img src={poster} alt="Smiley face" />
+          <Poster posterPath={movie.posterPath}/>
         </div>
         <div className="info">
           <div className="row top">

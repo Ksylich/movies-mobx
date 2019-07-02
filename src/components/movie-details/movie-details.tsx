@@ -6,10 +6,10 @@ import { RouteComponentProps, withRouter } from "react-router-dom";
 import "./movie-details.css";
 
 import NoPoster from "../../assets/icons/NoPoster.jpg";
-import { IMovieStore, MOVIES_STORE } from "../../mobx/stores/movies";
 import Movie from "../../movie-object";
 import { DecktopMovieInformation, DecktopNav } from "../movie-details-desktop";
 import { MobMovieInformation, MobNav } from "../movie-details-mb";
+import { IMovieStore, MOVIES_STORE } from "../stores/movies";
 
 interface IProps extends RouteComponentProps {
   [MOVIES_STORE]?: IMovieStore;

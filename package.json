@@ -152,6 +152,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.4.4",
     "@types/classnames": "^2.2.8",
+    "@types/dotenv": "^6.1.1",
     "@types/lodash": "^4.14.134"
   }
 }

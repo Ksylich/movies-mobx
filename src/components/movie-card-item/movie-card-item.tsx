@@ -1,10 +1,10 @@
+import classNames from "classnames";
 import React, { useCallback } from "react";
 import { Link } from "react-router-dom";
 
 import "./movie-card-item.css";
 
-// TODO: Создай лучше отдельный компонент для постера, чтоб картинку ипортировать только 1 раз
-import NoPoster from "../../assets/icons/NoPoster.jpg";
+import Poster from "../poster";
 
 interface IProps {
   movie: { id: number; title: string; posterPath: string };
@@ -12,16 +12,16 @@ interface IProps {
   onHandleChooseMovie: (event: any) => void;
 }
 
-const MovieCardItem = ({ movie, idx, onHandleChooseMovie }: IProps) => {
+const MovieCardItem: React.FC<IProps> = ({ movie, idx, onHandleChooseMovie }) => {
   const { title, posterPath } = movie;
 
   const style = `crd crd-${idx}`;
 
-  const poster = posterPath || NoPoster;
-
   const chooseMovie = useCallback(() => {
     onHandleChooseMovie(movie.id);
   }, [movie.id, onHandleChooseMovie]);
+
+  const stl = classNames("card-img-top");
 
   return (
     <div
@@ -31,8 +31,9 @@ const MovieCardItem = ({ movie, idx, onHandleChooseMovie }: IProps) => {
       onClick={chooseMovie}
     >
       <Link className="lnk" to="/movie-details-page">
-        <img src={poster} alt="" className="card-img-top" />
+        <Poster posterPath={posterPath} style={stl} />
       </Link>
+
     </div>
   );
 };

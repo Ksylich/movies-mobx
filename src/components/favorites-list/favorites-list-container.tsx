@@ -1,7 +1,7 @@
 import { inject, observer } from "mobx-react";
 import React, { Component } from "react";
 
-import { IMovieStore, MOVIES_STORE } from "../../mobx/stores/movies";
+import { IMovieStore, MOVIES_STORE } from "../stores/movies";
 import FavoritesList from "./favorites-list";
 
 interface IProps {
@@ -14,8 +14,7 @@ interface IMethod {
 
 @inject(MOVIES_STORE)
 @observer
-// TODO: Неверно используешь описание компонента. У него идет описание пропосов, а потом стейта. То что у тебя в IMethod нужно описывать как class Container implements IMethod
-class FavoritesListContainer extends Component<IProps, IMethod> {
+class FavoritesListContainer extends Component<IProps> implements IMethod {
   public onHandleRemoveMovie = (id: number) => {
     const { [MOVIES_STORE]: moviesStore } = this.props;
     moviesStore!.removeMovie(id);
